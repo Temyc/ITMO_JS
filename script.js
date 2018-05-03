@@ -1,49 +1,57 @@
 
 // Домашнее задание ко второму занятию
 
-var a = 11;
+var a = 5;
 var b = 7;
-var c = 1;
-if (a < b && c) {
+var c = 2;
+if (a < b && a < c) {
     alert(a);
-} else if (b < c && a) {
+} else if (b < c && b < a) {
     alert(b);
-} else if (c < a && b) {
+} else if (c < a && c < b) {
     alert(c);
 } else {
     alert ('все числа одинаковы');
 }
 
-var num = prompt ('Введите число от -999 до 999','');
-if (+num < 0 && +num > -100) {
+var num = +prompt ('Введите число от -999 до 999','');
+if (num < 0 && num > -10) {
+    alert ('отрицательное однозначное число');
+} else if (num < -9 && num > -100) {
     alert ('отрицательное двузначное число');
-} else if (+num == 0) {
+} else if (num < -99 && num > -1000) {
+    alert ('отрицательное трёхзначное число');    
+} else if (num === 0) {
     alert ('Нулевое число')
-} else if (+num > 0 && +num < 10) {
+} else if (num > 0 && num < 10) {
     alert ('Положительное однозначное число')
+} else if (num > 9 && num < 100) {
+    alert ('Положительное двузначное число')
+} else if (num > 99 && num < 1000) {
+    alert ('Положительное трёхзначное число')
 }
 
-var num = prompt ('Введите целое число от 1 до 9','');
-(+num == 0)? alert('ноль'):
-(+num == 1)? alert('один'):
-(+num == 2)? alert('два'):
-(+num == 3)? alert('три'):
-(+num == 4)? alert('четыре'):
-(+num == 5)? alert('пять'):
-(+num == 6)? alert('шесть'):
-(+num == 7)? alert('семь'):
-(+num == 8)? alert('восемь'):alert('девять');
+var num = +prompt ('Введите целое число от 1 до 9','');
+(num === 0)? alert('ноль'):
+(num === 1)? alert('один'):
+(num === 2)? alert('два'):
+(num === 3)? alert('три'):
+(num === 4)? alert('четыре'):
+(num === 5)? alert('пять'):
+(num === 6)? alert('шесть'):
+(num === 7)? alert('семь'):
+(num === 8)? alert('восемь'):alert('девять');
 
-var num = prompt ('Введите целое число от 1 до 5','');
-(+num == 1)? alert('плохо'):
-(+num == 2)? alert('неуд'):
-(+num == 3)? alert('уд'):
-(+num == 4)? alert('хорошо'):alert('отлично');
+var num = +prompt ('Введите целое число от 1 до 5','');
+(num === 1)? alert('плохо'):
+(num === 2)? alert('неуд'):
+(num === 3)? alert('уд'):
+(num === 4)? alert('хорошо'):alert('отлично');
 
-var a = prompt('введите первое число','');
-var b = prompt('введите второе число','');
-var c = prompt('введите третье число','');
-if (a==b || a==c || b==c) {
+var a = +prompt('введите первое число','');
+var b = +prompt('введите второе число','');
+var c = +prompt('введите третье число','');
+if (a===b || a===c || b===c) {
     alert('true');
 } else {
     alert('false');
