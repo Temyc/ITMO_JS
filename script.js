@@ -137,14 +137,12 @@
     3) 'Сел в озере березов лес' – это строка палиндром*/
 
 
-// var pall = prompt('Напишите паллиндром','');
-// var separate = pall.split("");
-// console.log(separate);
-// var reversed = separate.reverse();
-// console.log(reversed);
-// var joint = reversed.join("");
-// console.log(joint);
-// if (pall == reversed) {
+// var string = prompt('Напишите паллиндром','');
+// var pallindrom = string.replace(/\s+/g,'').toLowerCase();
+// console.log(pallindrom);//проверка
+// var newPallindrom = pallindrom.split("").reverse().join("");
+// console.log(string);//проверка
+// if (pallindrom === newPallindrom) {
 //     alert("это паллиндром");
 // } else {
 //     alert("попробуйте ещё раз");
@@ -178,21 +176,21 @@
 // 3) если мы помыли все тарелки и моющее средство закончилось, 
 // то вывести: 'Все тарелки вымыты, моющее средство закончилось'
 
-var plate = prompt ('Введите количество тарелок','');
-var cleaner = prompt ('Введите количество моющего средства','');
-while (plate !==0 && cleaner!==0) {
-    plate = plate - 1;
-    cleaner = cleaner - 0.5;
-    console.log(plate);
-    console.log(cleaner);
-}
-if (plate === 0 && cleaner === 0) {
-    alert ('Все тарелки вымыты');
-}else if (plate === 0 && cleaner !== 0) {
-    alert('Тарелки вымыты, но осталось ' + cleaner + ' единиц моющего средство');
-}else if (plate !== 0 && cleaner ===0) {
-    alert('осталось ' + plate + ' тарелок, и моющего средства не осталось');
-}
+// var plate = prompt ('Введите количество тарелок','');
+// var cleaner = prompt ('Введите количество моющего средства','');
+// while (plate !==0 && cleaner!==0) {
+//     plate = plate - 1;
+//     cleaner = cleaner - 0.5;
+//     console.log(plate);
+//     console.log(cleaner);
+// }
+// if (plate === 0 && cleaner === 0) {
+//     alert ('Все тарелки вымыты');
+// }else if (plate === 0 && cleaner !== 0) {
+//     alert('Тарелки вымыты, но осталось ' + cleaner + ' единиц моющего средство');
+// }else if (plate !== 0 && cleaner ===0) {
+//     alert('осталось ' + plate + ' тарелок, и моющего средства не осталось');
+// }
 
 
 
