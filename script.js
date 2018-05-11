@@ -228,105 +228,14 @@
 // 	символов (например, !, $, #, %).
 
 // var password = prompt ('Введите пароль содержащий маленькие и большие буквы латинского алфавита,более 2х цифр и символы !,$,#,%','');
-// var reg = /((?=.*\d{2,})(?=.*[a-z])(?=.*[A-Z])(?=.*[!$#%]).{9,})/g;
-// console.log(password.match(reg));
-// if (password.match(reg)!==null) {
+// var pass = password.replace(/ /g,"");
+// var reg = /((?=.*\d{3,})(?=.*[a-z])(?=.*[A-Z])(?=.*[!$#%]).{9,})/g;
+// console.log(pass.match(reg));
+// if (pass.match(reg)!==null) {
 //     alert ('Пароль введён корректно');
 // } else {
 //     alert ('Попробуйте ещё раз!');
 // }
-
-
-
-
-
-//упражнения для циклов
-
-// for (i=2;i<=10;i++) {
-//     if (i%2==0) alert(i);
-// }
-
-// var i = 0;
-// while (i<3) {
-//     alert ("номер " + i + "!" );
-//     i++;
-// }
-
-//Не совсем правильный вариант
-// var num = +prompt('Введите число больше 100','');
-// while (num<100){
-//     num = +prompt('Введите число больше 100','');
-// } 
-
-//Правильный вариант
-// var num;
-// do {
-//     num = prompt('Введите число больше 100','');
-// } while (num <= 100 && num != null);
-
-
-// nextPrime:
-//   for (var i = 2; i <= 10; i++) {
-//       for (var j = 2; j < i; j++) {
-//           if( i % j == 0) continue nextPrime;           
-//       } alert(i);
-//     } 
-
- 
-// var a = +prompt('a?', '');
-// switch (a) {
-//     case 0:
-//         alert(0);
-//         break;
-//     case 1:
-//         alert(1);
-//         break;
-//     case 2:
-//     case 3:
-//         alert(2 + 'или' + 3);
-//         break;
-// }
-
-
-// var sum = 0;
-// var i = 1;
-// while (i<=100) {
-//     sum = sum + i;
-//     i++;
-// }
-// alert(sum);
-
-
-// var num = prompt('input a number','');
-// if (num>0) {
-//     alert(1);
-// } else if (num<0) {
-//     alert(-1);
-// } else { 
-//     alert(0);
-// }
-
-// var name = prompt('Who are you?', '');
-// if (name == 'Admin') {
-//     var pass = prompt ('input password',''); 
-//     if (pass =='Dark master') {
-//         alert ('Welcome!');
-//     } else if (pass == null) {
-//         alert ('Вход отменен');
-//     } else {
-//         alert ('Пароль неверен');
-//     }
-// }   else if (name == null) {
-//     alert ('Ввод отменён');
-// }   else {
-//     alert ('я вас не знаю!');
-// }
-
-// result = (a + b < 4) ?  'Мало': 'Много';
-
-// var message = (login == 'Вася') ? 'Привет' :
-//     (login == 'Директор') ? 'Здравствуйте' :
-//     (login == '') ? 'нет логина' : ''
 
 
 
