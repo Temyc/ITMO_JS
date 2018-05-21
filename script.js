@@ -415,7 +415,121 @@
 // var rand = getRandom(0,100);
 // console.log(rand());
 
-    
+
+
+//// ДОМАШНЕЕ ЗАДАНИЕ К 15.05.2018 (ДЕВЯТОМУ ЗАНЯТИЮ)
+
+//// №1 
+//// Создать функцию которая выводит время в html и обновляет значения каждую секунду. 
+//// Время выводить в формате чч:мм:cc, при этом часы, минуты и секунды отобразить разными цветами.
+
+// var  date = document.getElementById('time');
+
+// var dateHrs = document.createElement('span');
+// dateHrs.style.color = "green";
+// date.appendChild(dateHrs);
+
+// var dateMin = document.createElement('span');
+// dateMin.style.color = "blue";
+// date.appendChild(dateMin);
+
+// var dateSec = document.createElement('span');
+// dateSec.style.color = "brown";
+// date.appendChild(dateSec);
+
+// function alertTime() {
+//     var now = new Date();    
+//     var nowHrs = now.getHours();
+//     var nowMin = now.getMinutes();
+//     var nowSec = now.getSeconds();
+//     if (nowHrs <= 9) {
+//         nowHrs = '0'+ nowHrs;
+//     };
+//     if (nowMin <= 9) {
+//         nowMin = '0' + nowMin; 
+//     };
+//     if (nowSec <= 9) {
+//         nowSec = '0' + nowSec;
+//     };
+//     dateHrs.textContent = nowHrs + ':';
+//     dateMin.textContent = nowMin + ':';
+//     dateSec.textContent = nowSec;     
+//     setTimeout(alertTime, 1000);    
+// }
+// alertTime();
+
+
+// № 2 
+// Создать объект «Товар» включающий: - свойства, такие как фото, артикул, описание и т.п.;
+// - метод, которому при вызове передается id пустого div элемента и в этот html элемент данный метод создаст и внесёт 
+// все необходимые html элементы, стили, и содержание для отображения всей информации хранящихся в свойствах 
+// объекта о данном товаре. Дизайн оформления информации в html о товаре – это ваше творчество.
+
+// var product = {
+//     photo: 'Pontiac.jpg',
+//     name: 'Pontiac',
+//     articul: 21345,
+//     description: 'пожиратель топлива',
+//     getInfo: function (goodsItem) {
+//         var goods = document.getElementById(goodsItem);
+//         var p = document.createElement('p');
+//         p.textContent = this.name;
+//         var p1 = document.createElement('p');
+//         p1.textContent = this.articul;
+//         var p2 = document.createElement('p');
+//         p2.textContent = this.description;
+//         var img = document.createElement('img');
+//         img.setAttribute('src', this.photo);
+//         img.style.width = '25%';
+//         goods.appendChild(p);
+//         goods.appendChild(p1);
+//         goods.appendChild(p2);
+//         goods.appendChild(img);
+
+//     }
+// }
+// product.getInfo('goodsItem');
+
+// № 3
+// Создать светофор (красный, желтый, зелёный). 
+// Переключать цвет у светофора через каждые 2 сек сверху вниз и снизу вверх.
+
+function showRed(){
+    var red = document.getElementById('redLight');
+    red.style.backgroundColor = 'red';
+    var yellow = document.getElementById('yellowLight');
+    yellow.style.backgroundColor = 'white';
+    var green = document.getElementById('greenLight');
+    green.style.backgroundColor = 'white';
+}
+function showYellow(){
+    var red = document.getElementById('redLight');
+    red.style.backgroundColor = 'white';
+    var yellow = document.getElementById('yellowLight');
+    yellow.style.backgroundColor = 'yellow';
+    var green = document.getElementById('greenLight');
+    green.style.backgroundColor = 'white';
+}
+function showGreen(){
+    var red = document.getElementById('redLight');
+    red.style.backgroundColor = 'white';
+    var yellow = document.getElementById('yellowLight');
+    yellow.style.backgroundColor = 'white';
+    var green = document.getElementById('greenLight');
+    green.style.backgroundColor = 'green';
+}
+function changeLights () {
+    setTimeout(showRed, 2000);
+    setTimeout(showYellow, 4000);
+    setTimeout(showGreen, 6000);
+    setTimeout(showYellow, 8000);    
+}
+changeLights ();
+setInterval(changeLights, 8000);
+
+
+
+
 
 
   
