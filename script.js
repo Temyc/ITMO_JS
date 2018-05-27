@@ -307,14 +307,14 @@
 //     interests: ['sport', 'reading', 'walking', 'talking'],
 //     university: 'SPbSU'
 // } 
-// function showStudentsItems () {
-//     for (var key in student) {
-//         if ( typeof  student[key] === 'object' && student[key] instanceof Object) {            
-//             for (i=0;i<student[key].length;i++){
-//                 console.log('Свойство студента ' + key + ' содержит ' + student[key][i]);
+// function showStudentsItems (object) {
+//     for (var key in object) {
+//         if ( typeof  object[key] === 'object' && object[key] instanceof Object) {            
+//             for (i=0;i<object[key].length;i++){
+//                 console.log('Свойство студента ' + key + ' содержит ' + object[key][i]);
 //             }
 //         } else {
-//             console.log("Свойство студента " + key + " содержит " + student[key]);
+//             console.log("Свойство студента " + key + " содержит " + object[key]);
 //         }          
 //     }      
 // }
@@ -338,20 +338,27 @@
 
 // № 3
 // Написать отдельную функцию, которая выводит пользователю заданное число чисел Фибоначчи. 
-// (например, первых 8 чисел Фибоначчи:  1, 1, 2, 3, 5, 8, 13, 21). Заданное число передается функции в качестве аргумента. 
+// (например, первых 8 чисел Фибоначчи:  1, 1, 2, 3, 5, 8, 13, 21). Заданное число передается функции
+// в качестве аргумента. 
 // function fib(n) {
+//     mass = [1,1];    
 //     var a = 1;
 //     var b = 1;
-//     for (i=3;i<=n;i++) {
-//     var c = a + b;
-//     a = b;
-//     b = c;
+//     if (n<=1){
+//        return n;
+//     } else {
+//         for (var i=3;i<=n;i++) {        
+//         var c = a + b;
+//         mass.push(c);
+//         a = b;    
+//         b = c;          
+//         }
+//     return mass;
 //     }
-//     return b;
 // }
-// alert( fib(3) ); // 2
-// alert( fib(6) ); // 8
-// alert( fib(77)); // 5527939700884757
+// alert( fib(0) ); // 1,1,2
+// alert( fib(8) ); // 1,1,2,3,5,8,13,21
+
 
 // № 4 
 
@@ -494,38 +501,38 @@
 // Создать светофор (красный, желтый, зелёный). 
 // Переключать цвет у светофора через каждые 2 сек сверху вниз и снизу вверх.
 
-function showRed(){
-    var red = document.getElementById('redLight');
-    red.style.backgroundColor = 'red';
-    var yellow = document.getElementById('yellowLight');
-    yellow.style.backgroundColor = 'white';
-    var green = document.getElementById('greenLight');
-    green.style.backgroundColor = 'white';
-}
-function showYellow(){
-    var red = document.getElementById('redLight');
-    red.style.backgroundColor = 'white';
-    var yellow = document.getElementById('yellowLight');
-    yellow.style.backgroundColor = 'yellow';
-    var green = document.getElementById('greenLight');
-    green.style.backgroundColor = 'white';
-}
-function showGreen(){
-    var red = document.getElementById('redLight');
-    red.style.backgroundColor = 'white';
-    var yellow = document.getElementById('yellowLight');
-    yellow.style.backgroundColor = 'white';
-    var green = document.getElementById('greenLight');
-    green.style.backgroundColor = 'green';
-}
-function changeLights () {
-    setTimeout(showRed, 2000);
-    setTimeout(showYellow, 4000);
-    setTimeout(showGreen, 6000);
-    setTimeout(showYellow, 8000);    
-}
-changeLights ();
-setInterval(changeLights, 8000);
+// function showRed(){
+//     var red = document.getElementById('redLight');
+//     red.style.backgroundColor = 'red';
+//     var yellow = document.getElementById('yellowLight');
+//     yellow.style.backgroundColor = 'white';
+//     var green = document.getElementById('greenLight');
+//     green.style.backgroundColor = 'white';
+// }
+// function showYellow(){
+//     var red = document.getElementById('redLight');
+//     red.style.backgroundColor = 'white';
+//     var yellow = document.getElementById('yellowLight');
+//     yellow.style.backgroundColor = 'yellow';
+//     var green = document.getElementById('greenLight');
+//     green.style.backgroundColor = 'white';
+// }
+// function showGreen(){
+//     var red = document.getElementById('redLight');
+//     red.style.backgroundColor = 'white';
+//     var yellow = document.getElementById('yellowLight');
+//     yellow.style.backgroundColor = 'white';
+//     var green = document.getElementById('greenLight');
+//     green.style.backgroundColor = 'green';
+// }
+// function changeLights () {
+//     setTimeout(showRed, 2000);
+//     setTimeout(showYellow, 4000);
+//     setTimeout(showGreen, 6000);
+//     setTimeout(showYellow, 8000);    
+// }
+// changeLights ();
+// setInterval(changeLights, 8000);
 
 
 
