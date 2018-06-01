@@ -1,0 +1,38 @@
+.wrapper{
+    width: 600px;
+    height: 450px;
+    border: 1px solid #000;
+    margin: auto;
+    position: relative;
+    background: #fff url(img/water.jpg) 0 0 no-repeat;
+  }
+  .mygun, .enemy, .shot{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+  }
+  
+  .mygun{
+    background: #f00;
+    background:  url(img/ship.png);
+    bottom: 0;
+  }
+  .enemy{
+    background: #369;
+    background: url(img/pirate-ship.png);
+    top:0
+  }
+  .shot{
+    background: #f63;
+    /*position: absolute;*/
+  }
+  .result{
+    font: 3em Arial,sans-serif;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+  .shot{
+    background:  url(img/bomb.png);
+  }
