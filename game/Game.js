@@ -1,5 +1,5 @@
 var mygun, enemy, wrapper;
-var flag = "right", i = 0, shots = 25;
+var flag = "right", i = 0, shots = 100;
 
 mygun = document.querySelector(".mygun");
 enemy = document.querySelector(".enemy");
@@ -94,6 +94,6 @@ function enemyMove(){
     flag = "right";  
   }  
   
-  setTimeout(enemyMove , 5);//можно через requestAnimationFrame(enemyMove)
+  setTimeout(enemyMove , 10);
 }
 enemyMove()
